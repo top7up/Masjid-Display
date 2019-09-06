@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sliders</title>
+  <!-- font-awesome version 5.8.2 -->
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"> -->
+
+  <!-- clock style -->
+  <link rel="stylesheet" href="css/clock.css">
+
+  <!-- custom style -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section id="slider" data-seconds="9">
+    <div class="slide-container">
+      <ul class="slide-track">
+        <li class="slide current-slide" dir="ltr">
+          <!-- الساعه و الوقت المتبقي للصلاة -->
+          <div class="clock-container">
+              <div class="clock">
+                <div class="clock__second"></div>
+                <div class="clock__minute"></div>
+                <div class="clock__hour"></div>
+                <div class="clock__axis"></div>
+              </div>
+          </div>
+          <span>الوقت المتبقي لصلاة</span><br>
+          <span id="current-pray"></span><br>
+          <span id="current-pray-countdown"></span><br>
+        </li>
+        <li class="slide">
+          <!-- التقويم -->
+          <span id="date"></span>
+          <span id="day"></span>
+          <ul id="calender"></ul>
+        </li>
+        <li class="slide">
+          <!-- االدعاء -->
+          <p>
+            عن ابي هريرة رضي الله عنه أن رسول الله صلى الله عليه وسلم قال: <br>
+            الصيام جنة فلا يرفث ولا يجهل, وإن امرؤ قاتله أو شاتمه فليقل: إني صائم مرتين
+          </p>
+        </li>
+        <li class="slide">
+          <!-- االدعاء -->
+          <p>
+            Text
+          </p>
+        </li>
+        <li class="slide weather" data-weather="true" data-city="riyadh" data-temperature-type="c" api-key="f481460b356c789ab9f0c3d014275d50">
+          <!-- درجة الحرارة والطقس -->
+          <p id="weather">
+            <img id="icon" /> <!-- fa-cloud- -->
+            <span id="temperature"></span><br> <!-- &deg; -->
+            <span id="weather-stats"></span>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="js/weather.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/praytime.js"></script>
+  <script src="js/calender.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/currentPray.js"></script>
+</body>
+
+</html>
